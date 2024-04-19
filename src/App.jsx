@@ -1,13 +1,16 @@
 import {useState} from 'react'
-
+import Dec from './icons/image/decoration.png'
 import './App.css'
 import HomePage from './pages/HomePage.jsx'
 
 function App() {
 
     return (
-        <div className='max-w-[1440px] m-auto'>
+        <div className={''}>
+
+        <div className=''>
             <HomePage/>
+        </div>
         </div>
     )
 }
