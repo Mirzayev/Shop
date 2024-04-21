@@ -49,22 +49,23 @@ const ActionProduct = () => {
 
     return (
         <div className='   m-auto   max-w-[1440px] lg:pb-[120px]'>
-            <div className='flex justify-between items-center pt-20 pb-10 px-3'>
-                <h4 className='md:text-4xl pho:text-xl font-semibold'>Акции</h4>
+            <div className='flex justify-between items-center lg:pt-20 pho:pt-4 lg:pb-10 pho:pb-4 sm:pt-10 sm:pb-5 px-3'>
+                <h4 className='md:text-4xl pho:text-xl font-bold'>Акции</h4>
                 <div className='flex items-center gap-5 py-3'>
                     <p> Все акции</p>
                     <i className="fa-solid fa-chevron-right pt-1"></i>
                 </div>
             </div>
 
-            <div className='flex xl:justify-between pho:justify-center gap-6 text-center  flex-wrap px-3'>
+            <div
+                className='grid pho:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 pho:justify-between gap-6 text-center  flex-wrap px-3'>
 
                 {products.map((e) => {
                     return (
-                        <div key={e.id} className='flex flex-col justify-center  bg-white p w-[272px] rounded-md'>
+                        <div key={e.id} className='flex flex-col justify-between  bg-white p  rounded-md '>
                             <div className='relative flex justify'>
                                 <img className='object-contain' src={e.img} alt=""/>
-                                <p className='bg-[#FF6633] py-1 px-2 absolute text-white rounded'>-50%</p>
+                                <p className='bg-[#FF6633] sm:py-1 sm:px-2 absolute bottom-2 left-1 pho:px-[3px] pho:py-[1px] pho:text-[12px] text-white rounded object-contain'>-50%</p>
                             </div>
 
                             <div className='flex justify-between text-start p-2'>
@@ -79,19 +80,28 @@ const ActionProduct = () => {
                                 </div>
                             </div>
 
-                            <p className='text-start px-2 text-[16px] w-[96%]'>{e.about}</p>
+                            <div className='   '>
+                                <div className='w-full  '>
 
-                            <div className='flex gap-[3px] text-slate-400 p-2'>
-                                <i className="fa-regular fa-star"></i>
-                                <i className="fa-regular fa-star"></i>
-                                <i className="fa-regular fa-star"></i>
-                                <i className="fa-regular fa-star"></i>
-                                <i className="fa-regular fa-star"></i>
-                            </div>
-                            <div className='p-2  '>
+                                    <p className='text-start px-2 text-[16px] w-[96%]'>{e.about}</p>
 
-                                <button className='duration-200 border-2 border-green-400 rounded-md  w-full text-green-400 h-10 hover:bg-[#FF6633] hover:border-none hover:text-white'>В корзину</button>
+                                    <div className='flex gap-[3px] text-slate-400 p-2'>
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                    </div>
+                                    <div className='p-2  '>
+
+                                        <button
+                                            className='duration-200 border-2 border-green-400 rounded-md  w-full text-green-400 h-10 hover:bg-[#FF6633] hover:border-none hover:text-white'>В
+                                            корзину
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     )
                 })}

@@ -48,37 +48,38 @@ const NewProduct = () => {
     ])
 
     return (
-        <div className='   m-auto   max-w-[1440px] pb-[120px]'>
-            <div className='flex justify-between items-center pt-20 pb-10 px-3'>
-                <h4 className='md:text-4xl pho:text-xl font-semibold'>Новинки </h4>
+        <div className='   m-auto   max-w-[1440px] lg:pb-[120px] pho:pb-4'>
+            <div className='flex justify-between items-center lg:pt-20 pho:pt-4 lg:pb-10 pho:pb-4 sm:pt-10 sm:pb-5 px-3'>
+                <h4 className='md:text-4xl pho:text-xl font-bold'>Новинки </h4>
                 <div className='flex items-center gap-5 py-3'>
                     <p>Все новинки</p>
                     <i className="fa-solid fa-chevron-right pt-1"></i>
                 </div>
             </div>
 
-            <div className='flex xl:justify-between pho:justify-center gap-6 text-center  flex-wrap px-3'>
+            <div
+                className='grid lg:grid-cols-4 pho:grid-cols-2 xl:justify-between pho:justify-center gap-6 text-center  flex-wrap px-3'>
 
                 {products.map((e) => {
                     return (
-                        <div key={e.id} className='flex flex-col justify-between w-[280px]   bg-white  rounded-md px-2'>
+                        <div key={e.id} className='flex flex-col justify-between  bg-white  rounded-md px-2'>
                             <div className='relative flex justify-center '>
-                                <img className='w-[272px] object-contain' src={e.img} alt=""/>
-                               </div>
+                                <img className=' object-contain' src={e.img} alt=""/>
+                            </div>
 
                             <div className='flex justify-between text-start p-2'>
-                            <div>
-                                <p className='font-semibold text-[16px]'>{e.costCard}₽</p>
-                                <p className='text-[#BFBFBF] text-[12px]'>{e.payment_1}</p>
+                                <div>
+                                    <p className='font-semibold text-[16px]'>{e.costCard}₽</p>
+                                    <p className='text-[#BFBFBF] text-[12px]'>{e.payment_1}</p>
+                                </div>
+
+                                <div>
+                                    <p className='text-'>{e.costNalich}₽</p>
+                                    <p className='text-[#BFBFBF] text-[12px]'>{e.payment_2}</p>
+                                </div>
                             </div>
 
-                            <div>
-                                <p className='text-'>{e.costNalich}₽</p>
-                                <p className='text-[#BFBFBF] text-[12px]'>{e.payment_2}</p>
-                            </div>
-                            </div>
-
-                            <p className='text-start px-2 text-[16px] w-[96%]'>{e.about}</p>
+                            <p className='text-start px-2 text-[16px]'>{e.about}</p>
 
                             <div className='flex gap-[3px] text-slate-400 p-2'>
                                 <i className="fa-regular fa-star"></i>
@@ -89,7 +90,10 @@ const NewProduct = () => {
                             </div>
                             <div className='p-2  '>
 
-                            <button className='duration-200 border-2 border-green-400 rounded-md  w-full text-green-400 h-10 hover:bg-[#FF6633] hover:border-none hover:text-white'>В корзину</button>
+                                <button
+                                    className='duration-200 border-2 border-green-400 rounded-md  w-full text-green-400 h-10 hover:bg-[#FF6633] hover:border-none hover:text-white'>В
+                                    корзину
+                                </button>
                             </div>
                         </div>
                     )
