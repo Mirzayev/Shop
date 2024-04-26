@@ -47,9 +47,21 @@ const ActionProduct = () => {
         },
     ])
 
+
+    const data = products
+
+
+
+
+
+
+    // console.log(limitData())
+
+
     return (
         <div className='   m-auto   max-w-[1440px] lg:pb-[120px]'>
-            <div className='flex justify-between items-center lg:pt-20 pho:pt-4 lg:pb-10 pho:pb-4 sm:pt-10 sm:pb-5 px-3'>
+            <div
+                className='flex justify-between items-center lg:pt-20 pho:pt-4 lg:pb-10 pho:pb-4 sm:pt-10 sm:pb-5 px-3'>
                 <h4 className='md:text-4xl pho:text-xl font-bold'>Акции</h4>
                 <div className='flex items-center gap-5 py-3'>
                     <p> Все акции</p>
@@ -60,7 +72,7 @@ const ActionProduct = () => {
             <div
                 className='grid pho:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 pho:justify-between gap-6 text-center  flex-wrap px-3'>
 
-                {products.map((e) => {
+                {data.map((e) => {
                     return (
                         <div key={e.id} className='flex flex-col justify-between  bg-white p  rounded-md '>
                             <div className='relative flex justify'>

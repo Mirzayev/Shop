@@ -9,9 +9,12 @@ function App() {
     return (
         <div className={''}>
 
-        <div className=''>
+        <div className='bg-[#FBF8EC] '>
+            <div className='max-w-[1440px] m-auto'>
             <HomePage/>
             <Footer/>
+
+            </div>
         </div>
         </div>
     )

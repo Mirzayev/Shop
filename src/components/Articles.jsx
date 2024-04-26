@@ -7,7 +7,7 @@ export default function Articles() {
 
 
     return (
-        <div className='max-w-[1440px] m-auto'>
+        <div className='max-w-[1440px] m-auto py-20'>
             <div className='lg:mt-28 px-3'>
                 <div className='flex justify-between lg:my-10 pho:my-3'>
                     <h4 className='lg:text-4xl pho:text-2xl font-bold '>Статьи</h4>
